@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    let firstNumber = parseInt(prompt("Please enter the first number"));
+    let secondNumber = parseInt(prompt("Please enter the second number"));
+    let sumArray = [firstNumber, secondNumber];
+    let totalSum = firstNumber + secondNumber;
+    let sumAll = function(a, b) {
+        if (a>b) {
+            while (a>(b-1)) {
+                b++;
+                sumArray.push(b);
+                totalSum = b + totalSum;
+            }
+        } else if (a<b) {
+            while (a<(b-1)) {
+                a++;
+                sumArray.push(a)
+                totalSum = a + totalSum;
+            }
+        } else {
+            sumArray.push(0);
+        }
+
+        console.log(sumArray);
+
+        console.log("The total sum of your array is: " + totalSum);
+    }
+
+    sumAll(firstNumber, secondNumber);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
